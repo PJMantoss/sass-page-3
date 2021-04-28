@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Lilita+One&family=Sarabun&family=ZCOOL+XiaoWei&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,91 @@
 }
 
 header {
-  background: lightblue;
+  height: 50vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background: lightblue;
+}
+header h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 50px;
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 40px;
+  }
+}
+header button {
+  display: inline-block;
+  background: #38928e;
+  color: #fff;
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 8px 24px;
+  margin: 20px 0 0 0;
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
+header button:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.contact {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: lightYellow;
+}
+.contact h2 {
+  font-family: "Lilita One", cursive;
+  font-size: 40px;
+}
+@media (max-width: 600px) {
+  .contact h2 {
+    font-size: 30px;
+  }
+}
+.contact p {
+  text-align: center;
+  font-size: 24px;
+  font-family: "ZCOOL XiaoWei", serif;
+  line-height: 1.8;
+}
+.contact button {
+  display: inline-block;
+  background: #ff3c00;
+  color: #fff;
+  font-family: "Sarabun", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 8px 24px;
+  margin: 20px 0 0 0;
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
+.contact button:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
