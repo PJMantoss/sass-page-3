@@ -1,4 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Lilita+One&family=Sarabun&family=ZCOOL+XiaoWei&display=swap');
+
+// Variables
 $primaryBtn : rgb(56, 146, 142);
+$secondaryBtn : rgb(255, 60, 0);
+$fontStackHeader : 'Amaranth', sans-serif;
+$fontStackContact : 'Lilita One', cursive;
+$fontStackBtn: 'Sarabun', sans-serif;
+$transform: scale(1.1);
+$mobile: 600px;
+
+@mixin flexCenter($direction, $background){
+    height: 50vh;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+}
+
+@mixin mobile{
+    @media(max-width: #{$mobile}){
+        @content;
+    }
+}
 
 * {
     margin: 0;
@@ -7,7 +31,86 @@ $primaryBtn : rgb(56, 146, 142);
 }
 
 header{
-    background: lightblue;
-    display: flex;
-    justify-content: center;
+    @include flexCenter(column, lightblue);
+
+    h1{
+        font-family: $fontStackHeader;
+        font-size: 50px;
+
+        @include mobile{
+            font-size: 40px;
+        }
+    }
+
+    button{
+        display: inline-block;
+        background: $primaryBtn;
+        color: #fff;
+        font-family: $fontStackBtn;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding: 8px 24px;
+        margin: 20px 0 0 0;
+        border: none;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        cursor: pointer;
+
+        &:hover{
+            transform: $transform        ;
+            -webkit-transform: $transform        ;
+            -moz-transform: $transform        ;
+            -ms-transform: $transform        ;
+            -o-transform: $transform        ;
+        }
+    }
+}
+
+.contact {
+    @include flexCenter(column, lightYellow);
+
+    h2 {
+        font-family: $fontStackContact;
+        font-size: 40px;
+
+        @include mobile{
+            font-size: 30px;
+        }
+    }
+
+    p{
+        text-align: center;
+        font-size: 24px;
+        font-family: 'ZCOOL XiaoWei', serif;
+        line-height: 1.8;
+    }
+
+    button{
+        display: inline-block;
+        background: $secondaryBtn;
+        color: #fff;
+        font-family: $fontStackBtn;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding: 8px 24px;
+        margin: 20px 0 0 0;
+        border: none;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        cursor: pointer;
+
+        &:hover{
+            transform: $transform        ;
+            -webkit-transform: $transform        ;
+            -moz-transform: $transform        ;
+            -ms-transform: $transform        ;
+            -o-transform: $transform        ;
+        }
+    }
 }
